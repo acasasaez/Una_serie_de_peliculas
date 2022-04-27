@@ -11,7 +11,7 @@ Para esta tarea he hecho lo siguiente:
 Dejo a continuación el código para esta parte:
 ###Primera parte del código
 
-´´´
+```
 Valoraciones = [0,1,2,3,4,5]
 Personas =  [58,88,124,132,96,42]
 print("imprimir datos")
@@ -50,12 +50,13 @@ with open("resultados.csv.csv", "w",newline = "") as file:
     writer =csv.writer(file, delimiter = "," )
     writer.writerow( ["TABLA DE DATOS RESULTADOS"])
     writer.writerows(mis_datos_2)
-    ´´´
+    ```
 
 Para la segunda parte creé un nuevo archivo donde elaboré una función que me permities obtener el número de estrellas bajo el cual encontramos un determinado porcentaje de votos, es decir calculamos el número de estrellas que cuentan con una determinada frecuencia acumulada. 
 
 ### Segunda parte del código: 
-´´´
+
+```
 def DA(a,b, valor_porcentaje):
   
     lista_vacia  =[]
@@ -81,13 +82,13 @@ def DA(a,b, valor_porcentaje):
     for i in range (len(lista_vacia)):
         if Lista_puente[0] == lista_vacia [i]:
             return a [i]
-
-´´´
+```
 
 Finalmente, creé un main donde, mediante la importación de Pandas, se hace la lectura del .csv de los resultados y el número de estrellas que cuentan con el porcentaje de votos acumulados (valor indicado en el enunciado: 68%, 95%,97%)
 
 ###Tercera parte del código:
-´´´
+
+```
 from f import* 
  
 import pandas as pd 
@@ -99,5 +100,5 @@ print(df)
 print ("El 68% de los votos se encuentra en el intervalo [1,",(DA([0,1,2,3,4,5],[58,88,124,132,96,42], 68)),"]")
 print ("El 68% de los votos se encuentra en el intervalo [1," ,(DA([0,1,2,3,4,5],[58,88,124,132,96,42], 97)),"]")
 print ("El 68% de los votos se encuentra en el intervalo [1,",(DA([0,1,2,3,4,5],[58,88,124,132,96,42],95)),"]")
-´´´
+```
 Añadir que la intención inicial era hacer códigos más elaborados donde se incluyesen conocimientos aprendidos a lo largo del curso (recursividad, excepciones...) y terminar con el uso de gráficas con ayuda de matplotlib; pero no conseguía que funcionasen correctamente ninguno de los 2.
