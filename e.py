@@ -13,9 +13,26 @@ def modificar_lista_vacia (a,b):
 modificar_lista_vacia (Valoraciones, Personas)
 print( lista_vacia)
 
+from fileinput import close
 import numpy as np
 Media = np.mean(lista_vacia)
 Mediana = np.median(lista_vacia)
 Desviacion = np.std(lista_vacia)
 Varianza = np.var(lista_vacia)
 print (Media, Mediana, Desviacion, Varianza)
+
+
+mis_datos_1= [["Valoraciones:""Personas:"],
+[0, 58],
+[1,88],
+[2,124],
+[3,132],
+[4,96],
+[5,42]]
+mis_datos_2 =[ ["Media", "Mediana","Desviacion","Varianza"], 
+[Media, Mediana, Desviacion, Varianza],]
+import csv
+with open("resultados.csv.csv", "w",newline = "") as file: 
+    writer =csv.writer(file, delimiter = "," )
+    writer.writerow( ["TABLA DE DATOS RESULTADOS"])
+    writer.writerows(mis_datos_2)
