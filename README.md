@@ -9,7 +9,8 @@ Para esta tarea he hecho lo siguiente:
 
 4. Por último, escribí un archivo .csv que contuviese la tabla de resultados. 
 Dejo a continuación el código para esta parte:
-###Primera parte del código
+
+### Primera parte del código
 
 ```
 Valoraciones = [0,1,2,3,4,5]
@@ -50,7 +51,7 @@ with open("resultados.csv.csv", "w",newline = "") as file:
     writer =csv.writer(file, delimiter = "," )
     writer.writerow( ["TABLA DE DATOS RESULTADOS"])
     writer.writerows(mis_datos_2)
-    ```
+```
 
 Para la segunda parte creé un nuevo archivo donde elaboré una función que me permities obtener el número de estrellas bajo el cual encontramos un determinado porcentaje de votos, es decir calculamos el número de estrellas que cuentan con una determinada frecuencia acumulada. 
 
@@ -86,7 +87,7 @@ def DA(a,b, valor_porcentaje):
 
 Finalmente, creé un main donde, mediante la importación de Pandas, se hace la lectura del .csv de los resultados y el número de estrellas que cuentan con el porcentaje de votos acumulados (valor indicado en el enunciado: 68%, 95%,97%)
 
-###Tercera parte del código:
+### Tercera parte del código:
 
 ```
 from f import* 
