@@ -13,3 +13,4 @@ def modificar_lista_vacia (a,b):
 modificar_lista_vacia (Valoraciones, Personas)
 print( lista_vacia)
 
+import numpy as np
