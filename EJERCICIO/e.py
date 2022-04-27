@@ -18,7 +18,9 @@ Media = np.mean(lista_vacia)
 Mediana = np.median(lista_vacia)
 Desviacion = np.std(lista_vacia)
 Varianza = np.var(lista_vacia)
-mis_datos = ["Media", "Mediana","Desviación","Varianza"]
+mis_datos_1= [["Valoraciones:","Personas"]]
+mis_datos_2 =[ ["Media", "Mediana","Desviación","Varianza"], 
+[Media, Mediana, Desviacion, Varianza]]
 import csv
 with open("archivo.csv", "w",newline = "") as file: 
     writer =csv.writer(file, delimiter = "" )
