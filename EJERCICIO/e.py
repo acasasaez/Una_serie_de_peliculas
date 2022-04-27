@@ -14,3 +14,11 @@ modificar_lista_vacia (Valoraciones, Personas)
 print( lista_vacia)
 
 import numpy as np
+Media = np.mean(lista_vacia)
+Mediana = np.median(lista_vacia)
+Desviacion = np.std(lista_vacia)
+Varianza = np.var(lista_vacia)
+mis_datos = ["Media", "Mediana","Desviación","Varianza"]
+import csv
+with open("archivo.csv", "w",newline = "") as file: 
+    writer =csv.writer(file, delimiter = "" )
